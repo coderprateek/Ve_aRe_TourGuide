@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.min.js"></script> 
+  </head>
+  <body>
+
+ <a-scene>
+  <a-assets>
+	<video id="oyehoye" src="images/city.mp4">
+	<img id="ema" src="download.jpg">
+	</a-assets>
+     <a-camera position="0 4.5 -80"><a-cursor color="orange" position="0 5 0 ">
+     </a-camera>
+       <!--first box-->
+       <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="blue"  ></a-plane>
+       <a-plane  id="leftmargin" position="-18.66 5 -5" rotation="0 90 0" scale="20 10" color="grey" ></a-plane>
+       <a-plane  id="rightmargin" position="18.66 5 -5" rotation="0 -90 0" scale="20 10" src="#ema" ></a-plane>
+       <a-plane  id="farthestplane" position="0 5 -28.66" rotation="0 0 0" scale="10 10" color="blue"></a-plane>
+       <a-plane  id="2nsplane" position="9.33 5 -26.16" rotation="0 -30 0" scale="10 10" color="yellow"></a-plane>
+       <a-plane  id="3rdplane" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10"color="blue"></a-plane>
+       <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="green"></a-plane>
+       <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="red"></a-plane>
+	    <!-- <a-videosphere id="aayehaaye" position="0 0 -10000" src="#oyehoye"> </a-videosphere> --!>
+       <!--first box-->
+
+       <a-plane id="t1" position="0 5 -100" rotation="0 0 0" scale="10 10" color="blue" ></a-plane>
+       <a-plane id="t2" position="-5 5 -85" rotation="0 90 0" scale="30 10" color="Yellow" ></a-plane>
+       <a-plane id="t3" position="5 5 -85" rotation="0 -90 0" scale="30 10" color="yellow" ></a-plane>
+       <a-plane id="t4" position="0 10 -85" rotation="90 0 0" scale="30 10" color="green" ></a-plane>
+       <a-plane id="t5" position="0 0 -85" rotation="-90 0 0" scale="30 10" color="green" ></a-plane>
+
+</a-scenes>
+</body>
+</html>
