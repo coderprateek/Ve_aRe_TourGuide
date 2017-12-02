@@ -21,32 +21,83 @@
   </a-assets>
     <a-camera position="100 5 -85" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
       </a-camera>
-     <!--Aryaman's work starts-->
      <!--entry room-->
-      <!-- kriti's entry room design -->
-       <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="#28418D"  ></a-plane>
+       <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="blue"  ></a-plane>
        <a-plane  id="leftmargin" position="-18.66 5 -5" rotation="0 90 0" scale="20 10" color="grey" ></a-plane>
-       <a-plane  id="rightmargin" position="18.66 5 -5" rotation="0 -90 0" scale="20 10" src="#grey" ></a-plane>
-       <a-plane  id="farthestplane" position="0 5 -28.66" rotation="0 0 0" scale="10 10" color="#28418D"></a-plane>
-       <a-plane  id="2nsplaneright" position="9.33 5 -26.16" rotation="0 -30 0" scale="10 10" color="#101a38"></a-plane>
-       <a-plane  id="3rdplaneright" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10" color="#28418D"></a-plane>
-       <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="#000"></a-plane>
-       <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="#3F3F3F"></a-plane>
-       <a-plane  id="2nsplaneleft" position="-9.33 5 -26.16" rotation="0 30 0" scale="10 10" color="#101a38"></a-plane>
-       <a-plane  id="3rdplaneleft" position="-16.16 5 -19.33" rotation="0 60 0" scale="10 10" color="#28418D"></a-plane>
+       <a-plane  id="rightmargin" position="18.66 5 -5" rotation="0 -90 0" scale="20 10" color="grey" ></a-plane>
+       
+       <a-plane  id="farthestplane" position="0 5 -28.66" rotation="0 0 0" scale="10 10" color="blue">
+           <a-box    id="farthestplaneD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="farthestplaneU" scale=".2 .075 0.1" position="0.32 -.375 0" color="green"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+         
+
+       </a-plane>
+      
+       <a-plane  id="ns2planeright" position="9.33 5 -26.16" rotation="0 -30 0" scale="10 10" color="yellow">
+       <a-box    id="ns2planerightD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="ns2planerightU" scale=".2 .075 0.1" position="0.32 -.375 0" color="green"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       </a-plane>
+      
+
+       <a-plane  id="rd3planeright" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10"color="blue">
+         <a-box    id="rd3planerightD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="rd3planerightU" scale=".2 .075 0.1" position="0.32 -.375 0" color="green"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box> 
+
+       </a-plane>
+       <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="green"></a-plane>
+       <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="red"></a-plane>
+       
+       <a-plane  id="ns2planeleft" position="-9.33 5 -26.16" rotation="0 30 0" scale="10 10" color="yellow">
+       <a-box    id="ns2planeleftD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="ns2planeleftU" scale=".2 .075 0.1" position="0.32 -.375 0" color="green"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+       </a-plane>
+       
+       <a-plane  id="rd3planeleft" position="-16.16 5 -19.33" rotation="0 60 0" scale="10 10" color="blue">
+         <a-box    id="kyube" scale=".2 .075 0.1" position="0.32 -.45 0" color="black" >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box> 
+        </a-plane>
        <!--numbering from left to right-->
-       <a-cylinder id="cylinder1" position="-18.66 5 -15" radius="0.5" height="10" color="#451571"></a-cylinder>
-       <a-cylinder id="cylinder2" position="-13.66 5 -23.66" radius="0.5" height="10" color="#451571"></a-cylinder>
-       <a-cylinder id="cylinder3" position="-5 5 -28.66" radius="0.5" height="10" color="#451571"></a-cylinder>
-       <a-cylinder id="cylinder4" position="5 5 -28.66" radius="0.5" height="10" color="#451571"></a-cylinder>
-       <a-cylinder id="cylinder5" position="13.66 5 -23.66" radius="0.5" height="10" color="#451571"></a-cylinder>
-       <a-cylinder id="cylinder6" position="18.66 5 -15" radius="0.5" height="10" color="#451571"></a-cylinder>
+       <a-cylinder id="cylinder1" position="-18.66 5 -15" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder2" position="-13.66 5 -23.66" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder3" position="-5 5 -28.66" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder4" position="5 5 -28.66" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder5" position="13.66 5 -23.66" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder6" position="18.66 5 -15" radius="0.5" height="10" color="red"></a-cylinder>
 
        <a-videosphere src="#video"  position="0 5 -10000" radius="100" rotation="360 360 360"></a-videosphere> 
-       <a-entity video-controls="src:#video"></a-entity>
-       <!-- kriti's entry room design ends -->
+       <!--entrylist-->
+       <a-plane id="box1door" position="-7.5 5 -7" rotation="0 16 0" material="side: double; transparent: true; opacity: 0.4"  scale="3 7" color="green" >
+         <a-text value="Welcome To VR Guide" width="1.5" position="-0.25 .4 .1" ></a-text>
+         <a-text value="Jaipur" width="1.5" position="-0.25 .2 .1" ></a-text>
+         <a-text value="Jaisalmer" width="1.5" position="-0.25 .085 .1" ></a-text>
+         <a-text value="Jodhpur" width="1.5" position="-0.25 0 .1" ></a-text>
+         <a-text value="Udaipur" width="1.5" position="-0.25 -.1 .1" ></a-text>
+         <a-text value="Map" width="1.5" position="-0.25 -.19 .1" ></a-text>
+
+         <a-circle id="city1" radius=".02" position="-0.4 0 .2"  color="black"></a-circle>
+         <a-circle id="city2" radius=".02" position="-0.4 .1 .2"  color="black"></a-circle>
+         <a-circle id="city3" radius=".02" position="-0.4 0.2 .2"  color="black"></a-circle>
+         <a-circle id="city4" radius=".02" position="-0.4 -0.1 .2"  color="black"></a-circle>
+         <a-circle id="map" radius=".02" position="-0.4 -0.2 .2"  color="black"></a-circle>
+       </a-plane>
       <!--entry room--> 
-       
        <!--first box-->
 
        <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40" color="red"></a-plane>
@@ -372,21 +423,212 @@
 <script type="text/javascript">
     var cursor = document.querySelector('a-cursor');
     var camera = document.querySelector('a-camera');
-    var box1 = document.getElementById("t2a");
-    var box2 = document.querySelector("#t2b");
-  
-  box2.addEventListener( 'mouseenter', function ( )
+    var b1 = document.querySelector('#ns2planerightD')
+    var b2 = document.querySelector('#ns2planerightU')
+
+    var e1 = document.querySelector('#rd3planerightD')
+    var e2 = document.querySelector('#rd3planerightU')
+
+    var c1 = document.querySelector('#farthestplaneD')
+    var c2 = document.querySelector('#farthestplaneU')
+
+    var f1 = document.querySelector('#ns2planeleftD')
+    var f2 = document.querySelector('#ns2planeleftU')
+
+    var g1 = document.querySelector('#kyube')
+
+    var a1 = document.querySelector('#city1')
+    var a2 = document.querySelector('#city2')
+    var a3 = document.querySelector('#city3')
+    var a4 = document.querySelector('#city4')
+    var a5 = document.querySelector('#map')
+
+
+    b1.addEventListener( 'mouseenter', function ( )
     {
-     setTimeout(function(){ camera.setAttribute( 'position',
+      camera.setAttribute( 'position',
       {
-        for(z!=110){
-        x : 0,
+        x : -4.735,
         y : 5,
-        z : z-1;
-      }
+        z : -1.78
        } );
    
     });
+
+        b2.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 0,
+        y : 5,
+        z : -45
+       } );
+   
+    });
+
+
+        e1.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+   
+    });
+
+        e2.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -50,
+        y : 5,
+        z : -45
+       } );
+   
+    });
+
+            c1.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+         x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+   
+    });
+
+        c2.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 50,
+        y : 5,
+        z : -45
+       } );
+   
+    }); 
+
+       f1.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+   
+    });
+
+
+ g1.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+   
+    });
+        f2.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 0,
+        y : 5,
+        z : -44
+       } );
+   
+    });
+
+  a1.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 7.604,
+        y : 5,
+        z : -13.86
+       } );
+      camera.setAttribute( 'rotation',
+      {
+        x : 0,
+        y : 30,
+        z : 0
+       } );
+   
+    });
+
+  a2.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 6.291,
+        y : 6.600,
+        z : -19.808
+       } );
+      camera.setAttribute( 'rotation',
+      {
+        x : 0,
+        y : -30,
+        z : 0
+       } );
+   
+    });
+
+ a3.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 10.0,
+        y : 6.6,
+        z : -15.834
+       } );
+      camera.setAttribute( 'rotation',
+      {
+        x : 0,
+        y : -15,
+        z : 0
+       } );
+   
+    });
+
+a4.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -60291,
+        y : 6.6,
+        z : -19.808
+       } );
+      camera.setAttribute( 'rotation',
+      {
+        x : 0,
+        y : -60,
+        z : 0
+       } );
+   
+    });
+
+a5.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : -8.604,
+        y : 6.6,
+        z : -14.86
+       } );
+      camera.setAttribute( 'rotation',
+      {
+        x : 0,
+        y : -30,
+        z : 0
+       } );
+   
+    });
+
 </script>
 </body>
 </html>
