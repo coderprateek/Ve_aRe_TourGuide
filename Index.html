@@ -4,15 +4,18 @@
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.min.js"></script> 
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-component@^0.4.1/dist/aframe-text-component.min.js"></script> 
+</head>
   </head>
   <body>
 
  <a-scene>
   <a-assets>
   <video id="video" src="city.mp4" autoplay loop crossorigin="anonymous"></video>
-  <img id="jaipur1" src="images/imageudaipur1.jpg">
+  <a-image id="jaipur1" src="images/imageudaipur1.jpg">
+  <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
   </a-assets>
-     <a-camera position="0 5 -50" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
+     <a-camera position="100 5 -85" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
      </a-camera>
      <!--Aryaman's work starts-->
      <!--entry room-->
@@ -42,7 +45,7 @@
        
        <!--first box-->
 
-       <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40" src=""></a-plane>
+       <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40" color="red"></a-plane>
        <a-plane id="box1rightwala" position="15 5 -50" rotation="0 -90 0" scale="20 10" src="images/imageudaipur1.jpg"></a-plane>
        <a-plane id="box1leftwala" position="-15 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
        <a-plane id="box1doorwala" position="0 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
@@ -139,8 +142,8 @@
        <a-plane id="tunnel1doorwala" position="0 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" ></a-plane>
        <a-plane id="tunnel1leftwala" position="-5 5 -107.5" rotation="0 90 0" scale="45 10" color="#8B4513" ></a-plane>
      
-       <a-box id="tunnel1leftwala1"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd" >
-        <a-text value=" => Jaipur was founded by Maharaja Sawai Jai Singh on 18 November, 1727." width="0.7" color="black" position="-0.4 0.1 1" align="left">
+       <a-box id="tunnel1leftwala1"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" src="#jaipur1" opacity="0.6">
+        <a-text value=" => Jaipur was founded by Maharaja Sawai Jai Singh on 18 November, 1727." width="0.7" color="black" position="-0.4 0.2 1" align="left">
         </a-text>
         <!-- <a-text value="Maharaja Sawai Jai Singh" width="1" color="black" position="-5 7.5 -92.5">
         </a-text>
@@ -151,7 +154,7 @@
        <a-cylinder id="tunnel1leftwalacylinder1" position= "-5 5  -99.75" height="10" radius="1" color="#FFD700"></a-cylinder>
        <a-cylinder  id="tunnel1leftwalacylinder2" position= "-5 5  -114.75" height="10" radius="1" color="#FFD700"></a-cylinder>
        
-       <a-box id="tunnel1leftwala2"  position="-5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="##fffacd">
+       <a-box id="tunnel1leftwala2"  position="-5 5 -107.5" rotation="0 90 0" scale="10 8 .2" src="images/jaipurimage2.jpg" opacity="0.6">
         <a-text value="The ciy is also famous for handicrafts, jewellery, fabrics and carpets" width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
        <!--  <a-text value="handicrafts, jewellery," width="1" color="black" position="-5 7.5 -92.5">
@@ -160,7 +163,7 @@
         </a-text>   -->     
        </a-box>
        
-       <a-box id="tunnel1leftwala3"  position="-5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel1leftwala3"  position="-5 5 -122.5" rotation="0 90 0" scale="10 8 .2" src="images/jaipurimage4.jpg" opacity="0.6">
         <a-text value="Also known as Pink city, Jaipur is the capital city of Rajasthan" width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="Jaipur is the capital city" width="1" color="black" position="-5 7.5 -92.5">
@@ -170,7 +173,7 @@
 
        </a-box>
        
-       <a-box id="tunnel1rightwala1"  position="5 5 -92.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel1rightwala1"  position="5 5 -92.5" rotation="0 -90 0" scale="10 8 .2" src="images/imagejaipur6.jpg" opaacity="0.6">
          <a-text value="Jaipur is touted as the first ever planned city of India" width="0.7" color="black"  width="0.7" color="black" position="-0.4 0.1 1" align="left">
           </a-text>
           <!-- <a-text value="as the first ever" width="1" color="black" position="-5 7.5 -92.5">
@@ -180,7 +183,7 @@
        
        </a-box>
        
-       <a-box id="tunnel1rightwala2"  position="5 5 -107.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel1rightwala2"  position="5 5 -107.5" rotation="0 -90 0" scale="10 8 .2" src="images/imagejaipur7.jpg" opacity="0.7">
         <a-text value="It is spread in a wide area of 11117.8 sq. kilometres." width="0.7" color="black"  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="Wide area of" width="1" color="black" position="-5 7.5 -92.5">
@@ -190,7 +193,7 @@
         -->
        </a-box>
        
-       <a-box id="tunnel1rightwala3"  position="5 5 -122.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel1rightwala3"  position="5 5 -122.5" rotation="0 -90 0" scale="10 8 .2" src="images/imagejaipur8.jpg" opacity="0.7">
         <a-text value="The world famous Hawa Mahal and Amber Fort are located in Jaipur." width="0.7" color="black"  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="Hawa Mahal and Amer fort" width="1" color="black" position="-5 7.5 -92.5">
@@ -210,7 +213,7 @@
        <!--tunnel2--><!--left to the tunnel x is shifted -50-->
        <a-plane id="tunnel2doorwala" position="-50 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" ></a-plane>
        <a-plane id="tunnel2leftwala" position="-55 5 -107.5" rotation="0 90 0" scale="45 10" color="#8B4513" ></a-plane>
-       <a-box id="tunnel2leftwala1"  position="-55 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd" >
+       <a-box id="tunnel2leftwala1"  position="-55 5 -92.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer1.jpg" >
          <a-text value="The Golden city Jaisalmer is a UNESCO world heritage site."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="is a UNESCO" width="1" color="black" position="-5 7.5 -92.5">
@@ -220,10 +223,10 @@
        </a-box>
        <a-cylinder id="tunnel2leftwalacylinder1" position= "-55 5  -99.75" height="10" radius="1" color="#FFD700"></a-cylinder>
        <a-cylinder  id="tunnel2leftwalacylinder2" position= "-55 5  -114.75" height="10" radius="1" color="#FFD700"></a-cylinder>
-       <a-box id="tunnel2leftwala2"  position="-55 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel2leftwala2"  position="-55 5 -107.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer2.jpg">
          <a-text value="It was once a thriving trade centre having business relations with Persian countries."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
        </a-box>
-       <a-box id="tunnel2leftwala3"  position="-55 5 -122.5" rotation="0 90 0" scale="10 8 .2" color=#fffacd">
+       <a-box id="tunnel2leftwala3"  position="-55 5 -122.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer3.jpg">
          <a-text value="Jaisalmer was founded by Rawal Jaisal"  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="by" width="1" color="black" position="-5 7.5 -92.5">
@@ -231,7 +234,7 @@
         <a-text value="Rawal Jaisal" width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel2rightwala1"  position="-45 5 -92.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel2rightwala1"  position="-45 5 -92.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer4.jpg">
          <a-text value="Kuldhara Village located in Jaisalmer is said to be haunted."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="trade center having" width="1" color="black" position="-5 7.5 -92.5">
@@ -239,7 +242,7 @@
         <a-text value="relations with persian countries." width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel2rightwala2"  position="-45 5 -107.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel2rightwala2"  position="-45 5 -107.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer5.jpg">
          <a-text value="Jaisalmer also has one of the largest wind farms in India."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="largest wind farms" width="1" color="black" position="-5 7.5 -92.5">
@@ -247,7 +250,7 @@
         <a-text value="in India !!" width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel2rightwala3"  position="-45 5 -122.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel2rightwala3"  position="-45 5 -122.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imagejaisalmer6.jpg">
          <a-text value="Longewala in Jaisalmer was the battle ground for Indo-Pak war that happened in 1971." width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="Jaisalmer" width="1" color="black" position="-5 7.5 -92.5">
@@ -266,7 +269,7 @@
 <!--tunnel3--><!--tunnel 3 shifted to the right of the tunnel1 shift of 50-->
        <a-plane id="tunnel3doorwala" position="50 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" ></a-plane>
        <a-plane id="tunnel3leftwala" position="45 5 -107.5" rotation="0 90 0" scale="45 10" color="#8B4513" ></a-plane>
-       <a-box id="tunnel3leftwala1"  position="45 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd" >
+       <a-box id="tunnel3leftwala1"  position="45 5 -92.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/jodhpurimage1.jpg">
          <a-text value="Jodhpur is a city located in the Thar Desert of Rajasthan, India."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="Rao Jodha of Mandore." width="1" color="black" position="-5 7.5 -92.5">
@@ -276,7 +279,7 @@
        </a-box>
        <a-cylinder id="tunnel3leftwalacylinder1" position= "45 5  -99.75" height="10" radius="1" color="#FFD700"></a-cylinder>
        <a-cylinder  id="tunnel3leftwalacylinder2" position= "45 5  -114.75" height="10" radius="1" color="#FFD700"></a-cylinder>
-       <a-box id="tunnel3leftwala2"  position="45 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel3leftwala2"  position="45 5 -107.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/joshpurimage5.jpg">
          <a-text value="It was founded by Rao Jodha of Mandore in 1459."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="2nd largest city" width="1" color="black" position="-5 7.5 -92.5">
@@ -284,7 +287,7 @@
         <a-text value="of Rajasathan." width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel3leftwala3"  position="45 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel3leftwala3"  position="45 5 -122.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/jodhpurimage3.jpg">
          <a-text value="IIt is also known as the Gateway to Thar." width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="known as the " width="1" color="black" position="-5 7.5 -92.5">
@@ -292,7 +295,7 @@
         <a-text value="pink city" width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel3rightwala1"  position="55 5 -92.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel3rightwala1"  position="55 5 -92.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/jodhpurimage4.jpg">
          <a-text value="Also known as the Sun City, it is the second largest city in Rajasthan." width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
        <!--  <a-text value="Mehrangarh fort" width="1" color="black" position="-5 7.5 -92.5">
@@ -300,7 +303,7 @@
         <a-text value="is located in Jodhpur" width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel3rightwala2"  position="55 5 -107.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel3rightwala2"  position="55 5 -107.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/jodhpurimage5.jpg">
          <a-text value="Mehrangarh Fort, the largest fort in India is located in Jodhpur." width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="palace is located" width="1" color="black" position="-5 7.5 -92.5">
@@ -308,7 +311,7 @@
         <a-text value="in Jodhpur" width="1" color="black" position="-5 7.5 -92.5">
         </a-text> -->
        </a-box>
-       <a-box id="tunnel3rightwala3"  position="55 5 -122.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel3rightwala3"  position="55 5 -122.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/jodhpurimage6.jpg">
          <a-text value="Umaid Bhawan Palace is located in Jodhpur." width="0.7" color="black" position="-0.4 0.1 1" align="left">
         </a-text>
         <!-- <a-text value="is a UNESCO" width="1" color="black" position="-5 7.5 -92.5">
@@ -327,27 +330,27 @@
 <!--tunnel4--><!--right to right of the tunnel1 shift of hundred-->
        <a-plane id="tunnel4doorwala" position="100 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" ></a-plane>
        <a-plane id="tunnel4leftwala" position="95 5 -107.5" rotation="0 90 0" scale="45 10" color="#8B4513" ></a-plane>
-       <a-box id="tunnel4leftwala1"  position="95 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd" >
+       <a-box id="tunnel4leftwala1"  position="95 5 -92.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur1.jpg">
        <a-text value="It is a land around the azure water lakes, hemmed in by the Aravali Hills."  width="0.7" color="black" position="-0.4 0.1 1" align="left">
        </a-text> 
        </a-box>
        <a-cylinder id="tunnel4leftwalacylinder1" position= "95 5  -99.75" height="10" radius="1" color="#FFD700"></a-cylinder>
        <a-cylinder  id="tunnel4leftwalacylinder2" position= "95 5  -114.75" height="10" radius="1" color="#FFD700"></a-cylinder>
-       <a-box id="tunnel4leftwala2"  position="95 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel4leftwala2"  position="95 5 -107.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur2.jpg">
        <a-text value="Founded by Maharan Udai singh, it was the capital city of the Rajput state, Mewar." width="0.7" color="black" position="-0.4 0.1 1" align="left" >
          
        </a-text>
        </a-box>
-       <a-box id="tunnel4leftwala3"  position="95 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel4leftwala3"  position="95 5 -122.5" rotation="0 90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur3.jpg">
        <a-text value="Udaipur is popular destination for organising various national and international cultural events." width="0.7" color="black" position="-0.4 0.1 1" align="left"></a-text>
        </a-box>
-       <a-box id="tunnel4rightwala1"  position="105 5 -92.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel4rightwala1"  position="105 5 -92.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur4.jpg">
        <a-text value="Udaipur has a rich cultural heritage. Ghoomar, Kalbeila, Bhavai and Kachchhi Ghodi are various popular dance forms here." width="0.7" color="black" position="-0.4 0.1 1" align="left"></a-text>
        </a-box>
-       <a-box id="tunnel4rightwala2"  position="105 5 -107.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel4rightwala2"  position="105 5 -107.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur5.jpg">
        <a-text value="Kumbhalgarh fort built by Rana Kumbha has the longest wall which is second only to the Great Wall of China."  width="0.7" color="black" position="-0.4 0.1 1" align="left"></a-text>
        </a-box>
-       <a-box id="tunnel4rightwala3"  position="105 5 -122.5" rotation="0 -90 0" scale="10 8 .2" color="#fffacd">
+       <a-box id="tunnel4rightwala3"  position="105 5 -122.5" rotation="0 -90 0" scale="10 8 .2" opacity="0.7" src="images/imageudaipur6.jpg">
        <a-text value="Dhebar Lake is considered as the second largest artificial lake in Asia."  width="0.7" color="black" position="-0.4 0.1 1" align="left"></a-text>
        </a-box>
        <a-cylinder id="tunnel4righwalatcylinder1"  position= "105 5  -99.75" height="10" radius="1" color="#FFD700"></a-cylinder>
