@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,17 +17,21 @@
   <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
   <a-image id="jaipur1" src="images/imageudaipur1.jpg">
   <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+  <video id="jaipurdrone" autoplay loop="true" src="jaipurdronevideo.mp4">
+  <video id="jaisalmerdrone" autoplay loop="true" src="jaisalmerdronevideo.mp4">
+  <video id="jodhpurdrone" autoplay loop="true" src="vlc-record-2017-12-03-02h49m44s-Jodhpur Rajasthan India - 4K Video.mp4-.mp4">
+  <video id="udaipurdrone" autoplay loop="true" src="vlc-record-2017-12-03-02h24m43s-Udaipur Drone Video.mp4-.mp4">
   </a-assets>
       
   </a-assets>
-    <a-camera position="100 5 -85" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
+    <a-camera position="0 5 -1" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
       </a-camera>
      <!--entry room-->
-       <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="blue"  ></a-plane>
+       <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="#28418D"  ></a-plane>
        <a-plane  id="leftmargin" position="-18.66 5 -5" rotation="0 90 0" scale="20 10" color="grey" ></a-plane>
        <a-plane  id="rightmargin" position="18.66 5 -5" rotation="0 -90 0" scale="20 10" color="grey" ></a-plane>
        
-       <a-plane  id="farthestplane" position="0 5 -28.66" rotation="0 0 0" scale="10 10" color="blue">
+       <a-plane  id="farthestplane" position="0 5 -28.66" rotation="0 0 0" scale="10 10" src="#jaipurdrone">
            <a-box    id="farthestplaneD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -37,7 +42,7 @@
 
        </a-plane>
       
-       <a-plane  id="ns2planeright" position="9.33 5 -26.16" rotation="0 -30 0" scale="10 10" color="yellow">
+       <a-plane  id="ns2planeright" position="9.33 5 -26.16" rotation="0 -30 0" scale="10 10" src="#udaipurdrone">
        <a-box    id="ns2planerightD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -47,7 +52,7 @@
        </a-plane>
       
 
-       <a-plane  id="rd3planeright" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10"color="blue">
+       <a-plane  id="rd3planeright" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10" src="#jodhpurdrone">
          <a-box    id="rd3planerightD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -59,7 +64,7 @@
        <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="green"></a-plane>
        <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="red"></a-plane>
        
-       <a-plane  id="ns2planeleft" position="-9.33 5 -26.16" rotation="0 30 0" scale="10 10" color="yellow">
+       <a-plane  id="ns2planeleft" position="-9.33 5 -26.16" rotation="0 30 0" scale="10 10" src="#jaisalmerdrone">
        <a-box    id="ns2planeleftD" scale=".2 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -100,17 +105,50 @@
       <!--entry room--> 
        <!--first box-->
 
-       <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40" color="red"></a-plane>
-       <a-plane id="box1rightwala" position="15 5 -50" rotation="0 -90 0" scale="20 10" src="images/imageudaipur1.jpg"></a-plane>
+       <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40"  src="images/jaisalmer.jpg"></a-plane>
+       <a-plane id="box1rightwala" position="15 5 -50" rotation="0 -90 0" scale="20 10" color="red"></a-plane>
        <a-plane id="box1leftwala" position="-15 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane id="box1doorwala" position="0 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
-       <a-plane id="box1rightdoorwala" position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane id="box1leftdoorwala" position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+      
+       <a-plane id="box1doorwala" position="0 5 -80" rotation="0 0 0" scale="20.5 10" src="images/360video.png">
+       <a-box    id="box1doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box1doorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+
+       </a-plane>
+      
+       <a-plane id="box1rightdoorwala" position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" >
+       <a-box    id="box1rightdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box1rightdoorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+   
+
+       </a-plane>
+      
+       <a-plane id="box1leftdoorwala" position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" >
+          <a-box    id="box1leftdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       </a-plane>
        <a-plane id="box1peechewala" position="0 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
        <a-plane  id="box1uparWala" position="0 10 -60" scale="30 40" rotation="90 0 0" color="green"></a-plane>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "3 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-3 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-plane id="box1door" position="0 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+       
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "0 2 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "0 8 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="0 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 6" color="green" >
+         <a-text value="welcome To Jaisalmer" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
+          <a-box    id="box11doorb1" scale=".30 .075 0.1" position="0 -.25 0" color="black"  >
+            <a-text value="Let's Go" width="6" color="white" position="-0.45 -.1 1"></a-text>
+          </a-box>
+          <a-box    id="box11doorb2" scale=".20 .075 0.1" position="0 -.4 0" color="black"  >
+            <a-text value="Back" width="8" color="white" position="-0.4 -.1 1"></a-text>
+          </a-box>
+       </a-plane>
 
       <!--numbering of cylinders from left to right-->
        <a-cylinder id="cylinder1" position="-15 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
@@ -125,14 +163,52 @@
        <a-plane id="box2Neechewala" position="-50 0 -60" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
        <a-plane id="box2rightwala" position="-35 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
        <a-plane id="box2leftwala" position="-65 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane id="box2doorwala" position="-50 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
-       <a-plane id="box2rightdoorwala" position="-37.38 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane id="box2leftdoorwala" position="-62.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+      
+
+       <a-plane id="box2doorwala" position="-50 5 -80" rotation="0 0 0" scale="20.5 10" color="green" >
+        <a-box    id="box2doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box2doorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+      
+
+       <a-plane id="box2rightdoorwala" position="-37.38 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" >
+        <a-box    id="box2rightdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box2rightdoorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+      
+
+       <a-plane id="box2leftdoorwala" position="-62.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" >
+          <a-box    id="box2leftdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+
+       </a-plane>
        <a-plane id="box2peechewala" position="-50 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
        <a-plane  id="box2uparWala" position="-50 10 -60" scale="30 40" rotation="90 0 0" color="green"></a-plane>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-47 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-53 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-plane id="box1door" position="-50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+
+       <a-cylinder id="box2cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "-50 2 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box2cylinder2" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "-50 8 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="-50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 6" color="green" >
+         <a-text value="welcome To Jaipur" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
+          <a-box    id="box1doorb1" scale=".30 .075 0.1" position="0 -.25 0" color="black"  >
+            <a-text value="Let's Go" width="6" color="white" position="-0.45 -.1 1"></a-text>
+          </a-box>
+          <a-box    id="box1doob2r" scale=".20 .075 0.1" position="0 -.4 0" color="black"  >
+            <a-text value="Back" width="8" color="white" position="-0.4 -.1 1"></a-text>
+          </a-box>
+       </a-plane>
 
        <!--numbering of cylinders from left to right-->
        <a-cylinder id="cylinder1" position="-65 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
@@ -145,23 +221,59 @@
 
  <!--third box, right to the first box--><!--shift of 50 to the right-->
 
-       <a-plane id="box3Neechewala" position="50 0 -60" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
+       <a-plane id="box3Neechewala" position="50 0 -60" rotation="-90 0 0" scale="30 40" src="images/jaipur.jpg" ></a-plane>
        <a-plane id="box3rightwala" position="65 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
        <a-plane id="box3leftwala" position="35 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane id="box3doorwala" position="50 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
-       <a-plane id="box3rightdoorwala" position="62.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane id="box3leftdoorwala" position="37.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+      
+
+       <a-plane id="box3doorwala" position="50 5 -80" rotation="0 0 0" scale="20.5 10"  src="images/amberfort.jpg" opacity="1">
+       <a-text value="AMBER FORT" width="1.5" color="black" position="0 0.3 0">
+        <a-box    id="box3doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box3doorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+       <a-plane id="box3rightdoorwala" position="62.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" src="images/jaipurimage.jpg">
+       <a-text value="Fun Facts" width="2">
+        <a-box    id="box3rightdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box3rightdoorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+       <a-plane id="box3leftdoorwala" position="37.38 5 -69.75" rotation="0 76 0" scale="20.5 10" src="images/jaipurmap.png" >
+          <a-box    id="box3leftdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+
+       </a-plane>
        <a-plane id="box3peechewala" position="50 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
-       <a-plane  id="box3uparWala" position="50 10 -60" scale="30 40" rotation="90 0 0" color="green"></a-plane>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "53 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "47 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-plane id="box1door" position="50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+       <a-plane  id="box3uparWala" position="50 10 -60" scale="30 40" rotation="90 0 0" color="#800000"></a-plane>
+    
+       <a-cylinder id="box3cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "50 2 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box3cylinder2" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "50 8 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 6" color="green" >
+         <a-text value="welcome To Jaipur" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
+          <a-box    id="box13doorb1" scale=".30 .075 0.1" position="0 -.25 0" color="black"  >
+            <a-text value="Let's Go" width="6" color="white" position="-0.45 -.1 1"></a-text>
+          </a-box>
+          <a-box    id="box13doorb2" scale=".20 .075 0.1" position="0 -.4 0" color="black"  >
+            <a-text value="Back" width="8" color="white" position="-0.4 -.1 1"></a-text>
+          </a-box>
+       </a-plane>
 
        <!--numbering of cylinders from left to right-->
-       <a-cylinder id="cylinder1" position="35 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
-       <a-cylinder id="cylinder2" position="40.25 5 -80" radius="0.5" height="10" color="red"></a-cylinder>
-       <a-cylinder id="cylinder3" position="60.25 5 -80" radius="0.5" height="10" color="red"></a-cylinder>
-       <a-cylinder id="cylinder4" position="65 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
+       <a-cylinder id="cylinder1" position="35 5 -60" radius="0.5" height="10" color="#FFD700"></a-cylinder>
+       <a-cylinder id="cylinder2" position="40.25 5 -80" radius="0.5" height="10" color="#FFD700"></a-cylinder>
+       <a-cylinder id="cylinder3" position="60.25 5 -80" radius="0.5" height="10" color="#FFD700"></a-cylinder>
+       <a-cylinder id="cylinder4" position="65 5 -60" radius="0.5" height="10" color="#FFD700"></a-cylinder>
 
        <!--third box-->
 
@@ -170,14 +282,48 @@
        <a-plane id="box4Neechewala" position="120 0 -60" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
        <a-plane id="box4rightwala" position="135 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
        <a-plane id="box4leftwala" position="105 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane id="box4doorwala" position="120 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
-       <a-plane id="box4rightdoorwala" position="132.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane id="box4leftdoorwala" position="107.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+      
+
+       <a-plane id="box4doorwala" position="120 5 -80" rotation="0 0 0" scale="20.5 10" color="green" >
+        <a-box    id="box4doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box4doorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+       
+       <a-plane id="box4rightdoorwala" position="132.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" >
+        <a-box    id="box4rightdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       <a-box    id="box4rightdoorwalaU" scale=".16 .075 0.1" position="0.32 -.375 0" color="blue"  >
+         <a-text value="Visit" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>  
+  
+
+       </a-plane>
+       <a-plane id="box4leftdoorwala" position="107.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" >
+          <a-box    id="box4leftdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+       </a-box>
+       </a-plane>
        <a-plane id="box4peechewala" position="120 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
        <a-plane  id="box4uparWala" position="120 10 -60" scale="30 40" rotation="90 0 0" color="green"></a-plane>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "123 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "117 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
-       <a-plane id="box1door" position="120 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+
+       <a-cylinder id="box4cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "120 2 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box4cylinder2" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "120 8 -50" height="6" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box4door" position="120 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 6" color="green" >
+         <a-text value="welcome To Jaipur" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
+          <a-box    id="box1doorb1" scale=".30 .075 0.1" position="0 -.25 0" color="black"  >
+            <a-text value="Let's Go" width="6" color="white" position="-0.45 -.1 1"></a-text>
+          </a-box>
+          <a-box    id="box1doob2r" scale=".20 .075 0.1" position="0 -.4 0" color="black"  >
+            <a-text value="Back" width="8" color="white" position="-0.4 -.1 1"></a-text>
+          </a-box>
+       </a-plane>
 
        <!--numbering of cylinders from left to right-->
        <a-cylinder id="cylinder1" position="105 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
@@ -194,7 +340,11 @@
        <!-- Kriti's tunnel design begins-->
 
        <!--tunnel1-->
-       <a-plane id="tunnel1doorwala" position="0 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" ></a-plane>
+       <a-plane id="tunnel1doorwala" position="0 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" >
+         <a-box    id="tunnel1doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
+         <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
+
+       </a-plane>
        <a-plane id="tunnel1leftwala" position="-5 5 -107.5" rotation="0 90 0" scale="45 10" color="#8B4513" ></a-plane>
      
        <a-box id="tunnel1leftwala1"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" src="#jaipur1" opacity="0.6">
@@ -425,24 +575,33 @@
     var camera = document.querySelector('a-camera');
     var b1 = document.querySelector('#ns2planerightD')
     var b2 = document.querySelector('#ns2planerightU')
-
     var e1 = document.querySelector('#rd3planerightD')
     var e2 = document.querySelector('#rd3planerightU')
-
     var c1 = document.querySelector('#farthestplaneD')
     var c2 = document.querySelector('#farthestplaneU')
-
     var f1 = document.querySelector('#ns2planeleftD')
     var f2 = document.querySelector('#ns2planeleftU')
-
     var g1 = document.querySelector('#kyube')
-
     var a1 = document.querySelector('#city1')
     var a2 = document.querySelector('#city2')
     var a3 = document.querySelector('#city3')
     var a4 = document.querySelector('#city4')
     var a5 = document.querySelector('#map')
+    var a6 = document.querySelector('#box13doorb1')
+    var a7 = document.querySelector('#box13doorb2')
+    var a8 = document.querySelector('#box3doorwalaD')
+    var a9 = document.querySelector('#box3doorwalaU')
+    var a10 = document.querySelector('#box3rightdoorwalaD')
+    var a11 = document.querySelector('#box3rightdoorwalaU')
+    var a12= document.querySelector('#box3leftdoorwalaD')
+    var a13= document.querySelector('#tunnel1doorwalaD')
+    
 
+
+    
+    
+
+    
 
     b1.addEventListener( 'mouseenter', function ( )
     {
@@ -454,19 +613,16 @@
        } );
    
     });
-
         b2.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
       {
-        x : 0,
+        x : 50,
         y : 5,
-        z : -45
+        z : -42
        } );
    
     });
-
-
         e1.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -477,18 +633,16 @@
        } );
    
     });
-
         e2.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
       {
         x : -50,
         y : 5,
-        z : -45
+        z : -42
        } );
    
     });
-
             c1.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -499,18 +653,16 @@
        } );
    
     });
-
         c2.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
       {
         x : 50,
         y : 5,
-        z : -45
+        z : -42
        } );
    
     }); 
-
        f1.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -521,8 +673,6 @@
        } );
    
     });
-
-
  g1.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -539,11 +689,10 @@
       {
         x : 0,
         y : 5,
-        z : -44
+        z : -42
        } );
    
     });
-
   a1.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -560,7 +709,6 @@
        } );
    
     });
-
   a2.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -577,7 +725,6 @@
        } );
    
     });
-
  a3.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -594,7 +741,6 @@
        } );
    
     });
-
 a4.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -611,7 +757,6 @@ a4.addEventListener( 'mouseenter', function ( )
        } );
    
     });
-
 a5.addEventListener( 'mouseenter', function ( )
     {
       camera.setAttribute( 'position',
@@ -628,6 +773,84 @@ a5.addEventListener( 'mouseenter', function ( )
        } );
    
     });
+   a6.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+        x : 50,
+        y : 5,
+        z : -58
+       } );
+      });
+   a7.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+         x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+      });
+
+    a8.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+         x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+      });
+
+      a9.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+         x : 50,
+        y : 5,
+        z : -10000
+       } );
+      });
+
+      a10.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+       x : -4.735,
+        y : 5,
+        z : -1.78
+       } );
+      });
+      
+       a11.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+         x : 0,
+        y : 5,
+        z : -85
+       } );
+      });
+
+    a12.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+       x : -4.735,
+        y : 5,
+        z: -1.78
+       } );
+      });
+
+     a13.addEventListener( 'mouseenter', function ( )
+    {
+      camera.setAttribute( 'position',
+      {
+       x : 50,
+        y : 5,
+        z: -58
+       } );
+      });
 
 </script>
 </body>
