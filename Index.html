@@ -12,7 +12,7 @@
   <video id="video" src="city.mp4" autoplay loop crossorigin="anonymous"></video>
   <img id="ema" src="download.jpg">
   </a-assets>
-     <a-camera position="0 5 -90" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
+     <a-camera position="0 5 -5" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
      </a-camera>
   
      <!--entry room-->
@@ -24,6 +24,7 @@
        <a-plane  id="3rdplane" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10"color="blue"></a-plane>
        <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="green"></a-plane>
        <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="red"></a-plane>
+
        <a-videosphere src="#video"  position="0 5 -10000" radius="100" rotation="360 360 360"></a-videosphere> 
        <a-entity video-controls="src:#video"></a-entity>
        
@@ -36,6 +37,10 @@
        <a-plane id="box1rightdoorwala" position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box1leftdoorwala" position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box1peechewala" position="0 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "3 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-3 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="0 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+
 
        <!--first box-->
 
@@ -47,7 +52,10 @@
        <a-plane id="box2doorwala" position="-50 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
        <a-plane id="box2rightdoorwala" position="-37.38 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box2leftdoorwala" position="-62.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane id="box2peechewala" position="-50 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
+       <a-plane id="box2peechewala" position="-50 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane><a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-47 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "-53 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="-50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
+
 
        <!--second box-->
 
@@ -60,6 +68,9 @@
        <a-plane id="box3rightdoorwala" position="62.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box3leftdoorwala" position="37.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box3peechewala" position="50 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "53 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "47 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="50 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
 
        <!--third box-->
 
@@ -72,6 +83,9 @@
        <a-plane id="box4rightdoorwala" position="132.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box4leftdoorwala" position="107.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
        <a-plane id="box4peechewala" position="120 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "123 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-cylinder id="box1cylinder1" material="side: double; transparent: true; opacity: 0.5"  position= "117 5 -50" height="10" radius="0.3" color="orange"></a-cylinder>
+       <a-plane id="box1door" position="120 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 10" color="green" ></a-plane>
 
        <!--fourth box-->
 
@@ -170,7 +184,7 @@
        </a-box>
        <a-box id="tunnel4rightwala3"  position="105 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-cylinder id="tunnel4righwalatcylinder1" position= "105 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-cylinder id="tunnel4righwalatcylinder1"  position= "105 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
        <a-cylinder id="tunnel4righwalatcylinder2" position= "105 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
        <a-plane id="tunnel4rightwala" position="105 5 -107.5" rotation="0 -90 0" scale="45 10" color="yellow" ></a-plane>
        <a-plane id="tunnel4upperwala" position="100 10 -107.5" rotation="90 0 0" scale="10 45" color="green" ></a-plane>
@@ -187,7 +201,6 @@
     var box1 = document.getElementById("t2a");
     var box2 = document.querySelector("#t2b");
   
-
   box2.addEventListener( 'mouseenter', function ( )
     {
      setTimeout(function(){ camera.setAttribute( 'position',
