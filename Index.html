@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.min.js"></script> 
+    <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
   </head>
   <body>
 
  <a-scene>
   <a-assets>
-	<video id="oyehoye" src="images/city.mp4">
-	<img id="ema" src="download.jpg">
-	</a-assets>
-     <a-camera position="0 4.5 -80"><a-cursor color="orange" position="0 5 0 ">
+  <video id="video" src="city.mp4" autoplay loop crossorigin="anonymous"></video>
+  <img id="ema" src="download.jpg">
+  </a-assets>
+     <a-camera position="0 5 -50" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
      </a-camera>
        <!--first box-->
        <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="blue"  ></a-plane>
@@ -22,15 +23,65 @@
        <a-plane  id="3rdplane" position="16.16 5 -19.33" rotation="0 -60 0" scale="10 10"color="blue"></a-plane>
        <a-plane  id="uparWala" position="0 10 -15" scale="40 40" rotation="90 0 0" color="green"></a-plane>
        <a-plane  id="NeecheWala" position="0 0 -15" scale="40 40" rotation="-90 0 0" color="red"></a-plane>
-	    <!-- <a-videosphere id="aayehaaye" position="0 0 -10000" src="#oyehoye"> </a-videosphere> --!>
+       <a-videosphere src="#video"  position="0 5 -10000" radius="100" rotation="360 360 360"></a-videosphere> 
+       <a-entity video-controls="src:#video"></a-entity>
+       
        <!--first box-->
 
-       <a-plane id="t1" position="0 5 -100" rotation="0 0 0" scale="10 10" color="blue" ></a-plane>
-       <a-plane id="t2" position="-5 5 -85" rotation="0 90 0" scale="30 10" color="Yellow" ></a-plane>
-       <a-plane id="t3" position="5 5 -85" rotation="0 -90 0" scale="30 10" color="yellow" ></a-plane>
-       <a-plane id="t4" position="0 10 -85" rotation="90 0 0" scale="30 10" color="green" ></a-plane>
-       <a-plane id="t5" position="0 0 -85" rotation="-90 0 0" scale="30 10" color="green" ></a-plane>
+       <a-plane  position="0 0 -40" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
+       <a-plane  position="15 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
+       <a-plane  position="-15 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
+       <a-plane  position="0 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
+       <a-plane  position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
+       <a-plane  position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+       <a-entity position="0 0 -50" geometry="primitive: cylinder; radius: .2; height: 10; openEnded: true; "
+          material="side: double"></a-entity>
+
+
+       <!--tunnel-->
+       <a-plane id="t1" position="0 5 -130" rotation="0 0 0" scale="10 10" color="blue" ></a-plane>
+       <a-plane id="t2" position="-5 5 -107.5" rotation="0 90 0" scale="45 10" color="yellow" ></a-plane>
+       <a-box id="t2a"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey" >
+       </a-box>
+       <a-cylinder  position= "-5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-cylinder  position= "-5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-box id="t2b"  position="-5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       </a-box>
+       <a-box id="t2b"  position="-5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       </a-box>
+       <a-box id="t3a"  position="5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       </a-box>
+       <a-box id="t3b"  position="5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       </a-box>
+       <a-box id="t3c"  position="5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       </a-box>
+       <a-cylinder  position= "5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-cylinder  position= "5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-plane id="t3" position="5 5 -107.5" rotation="0 -90 0" scale="45 10" color="yellow" ></a-plane>
+       <a-plane id="t4" position="0 10 -107.5" rotation="90 0 0" scale="10 45" color="green" ></a-plane>
+       <a-plane id="t5" position="0 0 -107.5" rotation="-90 0 0" scale="10 45" color="green" ></a-plane>
+       <!--tunnel-->
 
 </a-scenes>
+<script type="text/javascript">
+    var cursor = document.querySelector('a-cursor');
+    var camera = document.querySelector('a-camera');
+    var box1 = document.getElementById("t2a");
+    var box2 = document.querySelector("#t2b");
+  
+
+  box2.addEventListener( 'mouseenter', function ( )
+    {
+     setTimeout(function(){ camera.setAttribute( 'position',
+      {
+        for(z!=110){
+        x : 0,
+        y : 5,
+        z : z-1;
+      }
+       } );
+   
+    });
+</script>
 </body>
 </html>
