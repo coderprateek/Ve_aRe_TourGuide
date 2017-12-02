@@ -12,7 +12,7 @@
   <video id="video" src="city.mp4" autoplay loop crossorigin="anonymous"></video>
   <img id="ema" src="download.jpg">
   </a-assets>
-     <a-camera position="0 5 -50" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
+     <a-camera position="0 5 -90" rotation="360 360 360"><a-cursor color="orange" position="0 5 0 ">
      </a-camera>
        <!--first box-->
        <a-plane  id="peecheWala" position="0 5 5" rotation="0 180 0" scale="37.32 10" color="blue"  ></a-plane>
@@ -28,38 +28,39 @@
        
        <!--first box-->
 
-       <a-plane  position="0 0 -40" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
-       <a-plane  position="15 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane  position="-15 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
-       <a-plane  position="0 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
-       <a-plane  position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-plane  position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
-       <a-entity position="0 0 -50" geometry="primitive: cylinder; radius: .2; height: 10; openEnded: true; "
-          material="side: double"></a-entity>
+       <a-plane id="box1Neechewala" position="0 0 -60" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
+       <a-plane id="box1rightwala" position="15 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
+       <a-plane id="box1leftwala" position="-15 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
+       <a-plane id="box1doorwala" position="0 5 -80" rotation="0 0 0" scale="20.5 10" color="green" ></a-plane>
+       <a-plane id="box1rightdoorwala" position="12.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" ></a-plane>
+       <a-plane id="box1leftdoorwala" position="-12.62 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" ></a-plane>
+       <a-plane id="box1peechewala" position="0 5 -40" rotation="0 180 0" scale="40 10" color="blue" ></a-plane>
 
+       <!--first box-->
 
        <!--tunnel-->
-       <a-plane id="t1" position="0 5 -130" rotation="0 0 0" scale="10 10" color="blue" ></a-plane>
-       <a-plane id="t2" position="-5 5 -107.5" rotation="0 90 0" scale="45 10" color="yellow" ></a-plane>
-       <a-box id="t2a"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey" >
+       <a-plane id="tunnel1doorwala" position="0 5 -130" rotation="0 0 0" scale="10 10" color="blue" ></a-plane>
+       <a-plane id="tunnel1leftwala" position="-5 5 -107.5" rotation="0 90 0" scale="45 10" color="yellow" ></a-plane>
+       <a-box id="tunnel1leftwala1"  position="-5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey" >
        </a-box>
-       <a-cylinder  position= "-5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
-       <a-cylinder  position= "-5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
-       <a-box id="t2b"  position="-5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       <a-cylinder id="tunnel1leftwalacylinder1" position= "-5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-cylinder  id="tunnel1leftwalacylinder2" position= "-5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-box id="tunnel1leftwala2"  position="-5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-box id="t2b"  position="-5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       <a-box id="tunnel1leftwala3"  position="-5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-box id="t3a"  position="5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       <a-box id="tunnel1rightwala1"  position="5 5 -92.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-box id="t3b"  position="5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       <a-box id="tunnel1rightwala2"  position="5 5 -107.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-box id="t3c"  position="5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
+       <a-box id="tunnel1rightwala3"  position="5 5 -122.5" rotation="0 90 0" scale="10 8 .2" color="grey">
        </a-box>
-       <a-cylinder  position= "5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
-       <a-cylinder  position= "5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
-       <a-plane id="t3" position="5 5 -107.5" rotation="0 -90 0" scale="45 10" color="yellow" ></a-plane>
-       <a-plane id="t4" position="0 10 -107.5" rotation="90 0 0" scale="10 45" color="green" ></a-plane>
-       <a-plane id="t5" position="0 0 -107.5" rotation="-90 0 0" scale="10 45" color="green" ></a-plane>
+       <a-cylinder id="tunnel1righwalatcylinder1" position= "5 5  -99.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-cylinder id="tunnel1righwalatcylinder2" position= "5 5  -114.75" height="10" radius="1" color="red"></a-cylinder>
+       <a-plane id="tunnel1rightwala" position="5 5 -107.5" rotation="0 -90 0" scale="45 10" color="yellow" ></a-plane>
+       <a-plane id="tunnel1upperwala" position="0 10 -107.5" rotation="90 0 0" scale="10 45" color="green" ></a-plane>
+       <a-plane id="tunnel1neechewala" position="0 0 -107.5" rotation="-90 0 0" scale="10 45" color="green" ></a-plane>
+       <a-plane id="tunnel1peechewala" position="0 0 -85" rotation="0 180 0" scale="10 10" color="blue" ></a-plane>
        <!--tunnel-->
 
 </a-scenes>
