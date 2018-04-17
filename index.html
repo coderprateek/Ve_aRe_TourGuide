@@ -13,6 +13,7 @@
  <a-scene>
   <a-assets>
   <video id="video" src="city.mp4" autoplay loop crossorigin="anonymous"></video>
+  <video id="videoudaipur" src="cityoflakes.mp4" autoplay loop crossorigin="anonymous"></video>
   <a-image id="jaipur1" src="images/imageudaipur1.jpg">
   <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
   <a-image id="jaipur1" src="images/imageudaipur1.jpg">
@@ -86,7 +87,9 @@
        <a-cylinder id="cylinder5" position="13.66 5 -23.66" radius="0.5" height="10" color="red"></a-cylinder>
        <a-cylinder id="cylinder6" position="18.66 5 -15" radius="0.5" height="10" color="red"></a-cylinder>
 
-       <a-videosphere src="#video"  position="0 5 -10000" radius="100" rotation="360 360 360"></a-videosphere> 
+       <a-videosphere src="#video"  position="0 5 -10000" radius="100" rotation="360 360 360"></a-videosphere>
+       <a-videosphere src="#videoudaipur"  position="0 5 -20000" radius="100" rotation="360 360 360"></a-videosphere> 
+
        <!--entrylist-->
        <a-plane id="box1door" position="-7.5 5 -7" rotation="0 16 0" material="side: double; transparent: true; opacity: 0.4"  scale="3 7" color="green" >
          <a-text value="Welcome To VR Guide" width="1.5" position="-0.25 .4 .1" ></a-text>
@@ -279,12 +282,13 @@
 
  <!--fourth box right to right to the first box--><!--shift of 120 to the right-->
 
-       <a-plane id="box4bottom" position="120 0 -60" rotation="-90 0 0" scale="30 40" color="red" ></a-plane>
+       <a-plane id="box4bottom" position="120 0 -60" rotation="-90 0 0" scale="30 40" src="images/udaipurbottom.jpg" ></a-plane>
        <a-plane id="box4right" position="135 5 -50" rotation="0 -90 0" scale="20 10" color="yellow" ></a-plane>
        <a-plane id="box4left" position="105 5 -50" rotation="0 90 0" scale="20 10" color="yellow" ></a-plane>
       
 
-       <a-plane id="box4doorwala" position="120 5 -80" rotation="0 0 0" scale="20.5 10" color="green" >
+       <a-plane id="box4doorwala" position="120 5 -80" rotation="0 0 0" scale="20.5 10" src="images/udaipurfront.jpg" opacity="1">
+        <a-text value="CITY OF LAKES" width="1.5" color="black" position="0 0.3 0">
         <a-box    id="box4doorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -295,7 +299,8 @@
 
        </a-plane>
        
-       <a-plane id="box4rightdoorwala" position="132.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" color="blue" >
+       <a-plane id="box4rightdoorwala" position="132.62 5 -69.75" rotation="0 -76 0" scale="20.5 10" src="images/udaipurfun.jpg">
+       <a-text value="Fun Facts" width="2">
         <a-box    id="box4rightdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -305,7 +310,7 @@
   
 
        </a-plane>
-       <a-plane id="box4leftdoorwala" position="107.38 5 -69.75" rotation="0 76 0" scale="20.5 10" color="blue" >
+       <a-plane id="box4leftdoorwala" position="107.38 5 -69.75" rotation="0 76 0" scale="20.5 10" src="images/udaipurmap.png">
           <a-box    id="box4leftdoorwalaD" scale=".16 .075 0.1" position="0.32 -.45 0" color="black"  >
          <a-text value="Back" width="7" color="red" position="-0.4 -.1 1" ></a-text>
        </a-box>
@@ -316,7 +321,7 @@
        <a-cylinder id="box4cylinder1" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "120 2 -50" height="6" radius="0.3" color="orange"></a-cylinder>
        <a-cylinder id="box4cylinder2" material="side: double; transparent: true; opacity: 0.5" rotation="0 0 90" position= "120 8 -50" height="6" radius="0.3" color="orange"></a-cylinder>
        <a-plane id="box4door" position="120 5 -50" rotation="0 0 0" material="side: double; transparent: true; opacity: 0.4"  scale="6 6" color="green" >
-         <a-text value="welcome To Jaipur" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
+         <a-text value="welcome To Udaipur" width="2" align="left" color="red" position="-.4 -.05 .1" ></a-text>
           <a-box    id="box1doorb1" scale=".30 .075 0.1" position="0 -.25 0" color="black"  >
             <a-text value="Let's Go" width="6" color="white" position="-0.45 -.1 1"></a-text>
           </a-box>
@@ -332,12 +337,6 @@
        <a-cylinder id="cylinder4" position="135 5 -60" radius="0.5" height="10" color="red"></a-cylinder>
 
        <!--fourth box-->
-
-       <!--Aryaman's work finishes-->
-   
-
-
-       <!-- Kriti's tunnel design begins-->
 
        <!--tunnel1-->
        <a-plane id="tunnel1doorwala" position="0 5 -130" rotation="0 0 0" scale="10 10" color="#86C5DA" >
@@ -591,6 +590,7 @@
     var a7 = document.querySelector('#box13doorb2')
     var a8 = document.querySelector('#box3doorwalaD')
     var a9 = document.querySelector('#box3doorwalaU')
+    var aa9 = document.querySelector('#box4doorwalaU')
     var a10 = document.querySelector('#box3rightdoorwalaD')
     var a11 = document.querySelector('#box3rightdoorwalaU')
     var a12= document.querySelector('#box3leftdoorwalaD')
@@ -810,6 +810,15 @@ a5.addEventListener( 'mouseenter', function ( )
         y : 5,
         z : -10000
        } );
+      });
+      aa9.addEventListener('mouseenter', function ( )
+      {
+        camera.setAttribute( 'position',
+        {
+          x: 50,
+          y: 5,
+          z: -20000
+        });
       });
 
       a10.addEventListener( 'mouseenter', function ( )
